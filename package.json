@@ -1,0 +1,12 @@
+{
+  "name": "sample-nodejs-cucumber",
+  "version": "0.0.1",
+  "author": "tuanvle",
+  "scripts": {
+    "test": "cucumber-js --format json | cucumber-junit > test-result.xml"
+  },
+  "dependencies": {
+    "cucumber": "^0.9.5",
+    "cucumber-junit": "^1.5.0"
+  }
+}
