@@ -15,4 +15,3 @@ Examples:
   | silver     |credit card|
   | gold       |paypal     |
   | platinum   |netbanking |
-  
