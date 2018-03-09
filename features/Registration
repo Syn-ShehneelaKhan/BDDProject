@@ -1,0 +1,67 @@
+Feature: Registeration
+As a new Quartz platform user, I want to be able to resgiter, so that I can access website
+
+Background:
+GIVEN I am on Quartz platform home page 
+
+
+Scenario Outline: I register on music website without providing details 
+
+WHEN I "Sign Up" or "Register"
+AND I do not enter registration details
+THEN Registration is unsuccessful
+AND I get an error to enter data for mandatory fields
+
+
+Scenario Outline: I register on music website providing mandatory details only 
+
+WHEN I "Sign Up" or "Register"
+AND I enter mandatory registration details
+AND I read terms and conditions
+AND I agree to terms and conditions
+AND I register 
+
+THEN Registration is successful
+
+
+Scenario Outline: I register on music website providing all the details
+
+WHEN I "Sign Up" or "Register"
+AND I enter registration details
+AND I read terms and conditions
+AND I agree to terms and conditions
+AND I register 
+
+THEN Registration is successful
+
+
+Scenario Outline: I register on music website without accepting terms and conditions
+
+WHEN I "Sign Up" or "Register"
+AND I enter registration details
+AND I read terms and conditions
+AND I disagree to terms and conditions
+
+THEN Registration is successful
+
+
+Scenario Outline: I register on music website providing invalid details
+
+WHEN I "Sign Up" or "Register"
+AND I enter registration details
+AND I agree to terms and conditions
+AND I register 
+
+THEN Registration is unsuccessful
+AND I get an error to enter correct data invalid data entries
+
+
+Scenario Outline: I register on music website providing only optional details
+
+WHEN I "Sign Up" or "Register"
+AND I enter optional registration details
+AND I agree to terms and conditions
+AND I register 
+
+THEN Registration is unsuccessful
+AND I get an error to enter data for mandatory details
